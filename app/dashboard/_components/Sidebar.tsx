@@ -33,7 +33,7 @@ const Sidebar = () => {
        
     },[])
   return (
-    <div className='w-64 border-2 h-screen py-4 px-4 flex flex-col '>
+    <div className='w-64 border-2  h-full py-4 px-4 flex flex-col '>
         <div className='border-b-2  flex items-center justify-center'>
         <Image src="/logo/logo.svg" alt='logo' width={100} height={100}/>
         </div>
