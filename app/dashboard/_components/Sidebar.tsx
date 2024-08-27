@@ -39,7 +39,7 @@ const Sidebar = () => {
         </div>
         <div className='mt-16 flex-1'>
             {sideMenus.map((menu,key)=>(
-                <div className={`flex gap-2 items-center my-4 hover:bg-purple-700 hover:px-2 hover:text-white py-1 rounded-md duration-300 cursor-pointer ${pathName==menu.path ? 'bg-purple-700 px-2 py-1 rounded-md':''}`}>
+                <div key={key} className={`flex gap-2 items-center my-4 hover:bg-purple-700 hover:px-2 hover:text-white py-1 rounded-md duration-300 cursor-pointer ${pathName==menu.path ? 'bg-purple-700 px-2 py-1 rounded-md':''}`}>
                   {menu.icon}
                   <h2>{menu.name}</h2>
                 </div>

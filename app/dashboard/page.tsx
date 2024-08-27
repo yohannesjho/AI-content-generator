@@ -6,7 +6,7 @@ import TemplateSection from './_components/TemplateSection'
 const dashboard = () => {
   const [inputValue, setInputValue] = useState<string>()
   return (
-    <div className='h-full' >
+    <div className='' >
       {/* search section */}
       <SearchSection inputSearch={(value:string)=>setInputValue(value)}/>
       {/* template section */}
