@@ -34,7 +34,7 @@ const TemplateContent = (props:PROPS) => {
       <FormSection  selectedTemplate={selectedTemplate} userInputData={(v:any)=>GenerateAiContent(v)} loading={loading} />
       {/* output section */}
       <div className='col-span-2'>
-        <OutputSection aiOutput={aiOutput}/>
+      <OutputSection aiOutput={aiOutput}/>
       </div>
      
     </div>

@@ -10,11 +10,11 @@ const layout = ({
     children: React.ReactNode;
   }>) => {
   return (
-    <div className='flex'>
+    <div className='flex h-full'>
          
-         <div className='border-2 md:max-w-64 hidden md:block'>
+         
          <Sidebar />
-         </div>
+         
          <div className='border-2 flex-1'>
             <Header/> 
             {children}

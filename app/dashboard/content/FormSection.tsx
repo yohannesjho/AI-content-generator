@@ -44,7 +44,7 @@ export default function FormSection({ selectedTemplate, userInputData, loading }
           {selectedTemplate?.form?.map((item, index) => (
             <div key={index} className=''>
               <label className='font-bold text-md mb-2'>{item.label}</label>
-              {item.field == 'input' ? <Input name={item.name} required={item?.required} onChange={(e) => onChangeHandler(e)} className='w-1/2' /> : item.field == "textarea" ? <Textarea className='w-3/4' /> : 'NULL'}
+              {item.field == 'input' ? <Input name={item.name} required={item?.required} onChange={(e) => onChangeHandler(e)} className='w-1/2' /> : item.field == "textarea" ? <Textarea onChange={(e) => onChangeHandler(e)} className='w-3/4' /> : 'NULL'}
             </div>
           ))}
           <Button type='submit' className='w-full' disabled={loading}>{loading&&<LoaderIcon className='animate-spin'/>}Generate Content</Button>
