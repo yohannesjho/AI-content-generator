@@ -8,6 +8,7 @@ import { chatSession } from '@/utils/AiModel'
 import { db } from '@/utils/db'
 import { AiOutput } from '@/utils/schema'
 import { useUser } from '@clerk/nextjs'
+import { fetchHistory } from '../../history/page'
 
  interface PROPS {
   params : {
@@ -30,6 +31,7 @@ const TemplateContent = (props:PROPS) => {
    const result = await chatSession.sendMessage(FinalAiPrompt)
    setAiOutput(result.response.text())
    await SavedInDb(formData,selectedTemplate?.slug,result.response.text())
+   
    setLoading(false)
  }
 
@@ -43,6 +45,8 @@ const TemplateContent = (props:PROPS) => {
                   })
           console.log(result)
  }
+
+ 
   return (
     <div className='grid grid-cols-1 md:grid-cols-3 bg-slate-100'>
       {/* form section */}

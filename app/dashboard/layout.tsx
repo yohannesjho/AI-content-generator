@@ -12,10 +12,10 @@ const layout = ({
   return (
     <div className='flex h-full'>
          
-         
+         <div className='md:w-64 hidden md:block fixed'>
          <Sidebar />
-         
-         <div className='border-2 flex-1'>
+         </div>
+         <div className='md:ml-64 w-full'>
             <Header/> 
             {children}
          </div>
