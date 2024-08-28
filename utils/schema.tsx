@@ -3,7 +3,7 @@ import { pgTable,serial,varchar, text } from "drizzle-orm/pg-core";
 
 export const AiOutput = pgTable('aiOutput',{
     id:serial('id').primaryKey(),
-    formDAta:varchar('formData').notNull(),
+    formData:varchar('formData').notNull(),
     aiResponse:text('aiResponse'),
     templateSlug:varchar('templatSlug').notNull(),
     createdBy:varchar('createdBy').notNull(),
