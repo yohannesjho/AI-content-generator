@@ -17,16 +17,7 @@ const Sidebar = () => {
             name:'history',
             path:'/dashboard/history'
         },
-        {
-            icon:<FuelIcon/>,
-            name:'Billing',
-            path:'/dashboard/billing'
-        },
-        {
-            icon:<SettingsIcon/>,
-            name:'Settings',
-            path:'/dashboard/settings'
-        }
+       
     ]
 
     const pathName = usePathname()
