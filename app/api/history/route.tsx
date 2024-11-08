@@ -1,11 +1,13 @@
-import  type {NextApiRequest, NextApiResponse} from 'next'
-import fetchHistory  from '@/app/dashboard/history/page'
+// app/api/history/route.ts
+import { NextResponse } from 'next/server';
+import { fetchHistory } from '@/app/dashboard/history/page';  
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export async function GET() {
     try {
         const data = await fetchHistory();
-        res.status(200).json(data);
+        return NextResponse.json(data, { status: 200 });
     } catch (error) {
-        res.status(500).json({ error: 'Failed to fetch history data' });
+        console.error('Error fetching history data:', error);
+        return NextResponse.json({ error: 'Failed to fetch history data' }, { status: 500 });
     }
 }
