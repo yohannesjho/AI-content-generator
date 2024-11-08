@@ -1,5 +1,5 @@
 import  type {NextApiRequest, NextApiResponse} from 'next'
-import { fetchHistory } from '@/app/dashboard/history/page'
+import fetchHistory  from '@/app/dashboard/history/page'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     try {
